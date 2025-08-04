@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+.header-navbar{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+}
+
+.header-name a p{ 
+    float: left;
+    margin: 20px 0 0 28px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size:17;
+    font-weight: 500;
+    color: #fff;
+    font-family: "Abril Fatface", sans-serif;
+}
+
+.nav{
+    float: right;
+    margin: 30px 28px 0 0;
+    display: flex;
+    list-style: none;
+}
+
+.nav li{
+    margin: 0 15px 0 10px;
+    text-transform: uppercase;
+    font-size:small;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+#nav-active a{
+    color: #6f42c1;
+}
+
+.clear{
+    clear: both;
+}
+
+.home {
+    height: 100vh;
+    position: relative;
+    background: url('../images/hero_2.jpg') fixed 0% 0% / cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    font-size: 86px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+/* section */
+
+.section{
+    padding: 8% 0 12% 0;
+}
+
+.section-container{
+    position: relative;
+    width: 100%;
+    padding-left: 18%; 
+}
+
+.section-content , 
+.work-title{
+    text-align: center;
+    margin-bottom: 31px;
+}
+
+.email , .web , .mobile , .research{
+    float: left;
+    padding: 0 5 0 5;
+    width: 20%;
+}
+
+.email i , .web i , .mobile i , .research i{
+    font-size: 40px;
+    color: #6f42c1;
+}
+
+h3 , h2{
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size:17;
+    margin: 9 0 8 0;
+}
+
+.research-title{
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size:17;
+    margin: 9 0 8 0;
+}
+
+p{
+    letter-spacing:0.2px;
+    color: #6c757d;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+/* work */
+
+.work{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.work-container{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.work-title h2{
+    margin-right: 16px;
+    font-size: x-large;
+}
+
+.work-title p{
+    width: 42%;
+    margin: auto;
+}
+
+.gallery-container {
+    margin-left: 15%;
+}
+
+.image-box {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.image-box:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left:0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: width 0.2s, height 0.2s;
+}
+
+.image-box:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.hover-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.hover-content h3 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    transition: top 0.5s , opacity 0.5s;
+}
+
+.hover-content p {
+    color: rgba(255, 255, 255, 0.5);
+    transition: top 0.5s , opacity 0.5s;
+    transition-delay: 0.3s;
+    font-size: 15px;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.image-box:hover .hover-content {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    z-index:100;
+}
+
+/* client */
+
+.client{
+    position: relative;
+    width: 100%;
+    height: 72%;
+    background-color: #f8f9fa;
+    margin-top: 20%;
+}
+
+.client-container{
+    position: absolute;
+    height: auto;
+    margin:auto;
+    background-color: #f8f9fa;
+}
+
+.client-title{
+    text-align: center;
+    margin-bottom: 9%;
+    margin-top: 4%;
+}
+
+.client-title h2{
+    font-size: x-large;
+}
+
+.client-content{
+    position:relative;
+    width: 31%;
+    height:50%;
+    margin-left: 17%;
+}
+
+.client-content img , .client-content-right img{
+    position: absolute;
+    top: -60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.client-content h4 , .client-content-right h4{
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size:15;
+    position: absolute;
+    left: 67px;
+    top: -49px;
+}
+
+.client-content span , .client-content-right span{
+    letter-spacing:0.2px;
+    color: #6c757d;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.8;
+    position: absolute;
+    left: 67px;
+    top: -32px;
+}
+
+.client-content p , .client-content-right p{
+    position: relative;
+    top: 12px;
+}
+
+.client-content-right{
+    position:relative;
+    width: 31%;
+    height:50%;
+    margin-left: 57%;
+    top: -103px;
+}
+
+.bollets{
+    text-align: center;
+}
+
+.service-bollets .li-active , .service-bollets .li-none{
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background-color: #6c757d;
+    margin: 10px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.service-bollets .li-none{
+    background-color: #6f42c1; 
+}
+
+/* creative */
+
+.creative{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.creative-content{
+    position: absolute;
+    width: 70%;
+    margin-left: 10%;
+}
+
+.image-left{
+    float: left;
+    overflow: hidden;
+    position: relative;
+    left: 10%;
+    width: 46%;
+    padding: 0 0 37px 0;
+    height: 10%;
+}
+
+.image-right{
+    float: right;
+    overflow: hidden;
+    right: 3%;
+    position: relative;
+}
+
+.creative-content span{
+    position: absolute;
+    top: 49%;
+    left: 59%;
+    text-transform: uppercase;
+    font-size: small;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #6f42c1;
+    letter-spacing: 0.4;
+}
+
+.creative-content h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    position: absolute;
+    top: 51%;
+    left: 616px;
+    font-family: "Abril Fatface", sans-serif;
+    letter-spacing: 0.4;
+}
+
+.creative-content p{
+    font-weight: 100;
+    color: #6c757d;
+    position: absolute;
+    font-size: small;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    top: 62%;
+    left: 59%;
+    letter-spacing: 0.4;
+}
+
+.btn{
+    color: #000;
+    position: absolute;
+    width: 13%;
+    height: 7%;
+    top: 88%;
+    left: 59%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background: #000;
+    color: #fff;
+    transition: 0.4s;
+    border: 1px solid #fff;
+}
+
+/* started */
+
+.started{
+    margin-top: 61%;
+    height: 27%;
+}
+
+.started-content{
+    height: 31%;
+    width: 100%;
+    position: absolute;
+    background-color: #6f42c1;
+    text-align: center;
+}
+
+.started-content h3{
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Abril Fatface", sans-serif;
+    letter-spacing: 0.4;
+    color: #fff;
+    margin-top: 2.4%;
+}
+
+.started-content p{
+    color: #fff;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.8%;
+}
+
+.started-btn{
+    color: #fff;
+    width: 13%;
+    height: 25%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 656px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s;
+    text-transform: capitalize;
+}
+
+.started-btn:hover{
+    background: #fff;
+    color: #000;
+    transition: 0.4s;
+    border: 1px solid #fff;
+}
+
+/* footer */
+
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 8%;
+}
+
+.footer-content{
+    position: absolute;
+    width: 90%;
+    height: 2%;
+    margin-left: 10%;
+    margin-top: 12%;
+}
+
+.footer-about{
+    position: absolute;
+    left: 7%;
+    bottom: -23px;
+    width: 20%;
+    margin-left: 5%;
+}
+
+.footer-about span , .footer-navigation span{
+    position: relative;
+    bottom: -43px;
+    right: 1%;
+    text-transform: uppercase;
+    font-size: small;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 0.4;
+    font-weight: 800;
+}
+
+.footer-navigation span{
+    right: 1%;
+}
+
+.footer-navigation{
+    position: absolute;
+    float: right;
+    width: 30%;
+    left: 18%;
+    margin-left: 29%;
+}
+
+.footer-navigation span{
+    bottom: 67px;
+}
+
+.footer-about p{
+    position: relative;
+    top: 57px;
+    font-size: medium;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+}
+
+.footer-navigation ul{
+    list-style: none;
+    position: relative;
+    top: -63px;
+    font-size: medium;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+}
+
+.footer-navigation ul li{
+    padding: 5px 0 0 0;
+}
+
+.footer-navigation ul li a{
+    color: #000;
+    text-transform: capitalize;
+}
+
+.footer-icon{
+    position: relative;
+    right: 22%;
+    top: -70px;
+    float: right;
+}
+
+.footer-icon i{
+    padding: 0 7 0 7;
+    cursor: pointer;
+}
+
+/* end */
+
+.end{
+    margin-top: 23%;
+    position: absolute;
+    text-align: center;
+    height: 18%;
+    margin-left: 28%;
+}
+
+.end-content p{
+    font-size: medium;
+    text-align: center;
+    font-family: "Roboto Mono", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+}
