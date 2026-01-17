@@ -306,7 +306,7 @@ p{
     width: 31%;
     height:50%;
     margin-left: 57%;
-    top: -103px;
+    top: -130px;
 }
 
 .bollets{
@@ -375,7 +375,7 @@ p{
     text-transform: capitalize;
     position: absolute;
     top: 51%;
-    left: 616px;
+    left: 558px;
     font-family: "Abril Fatface", sans-serif;
     letter-spacing: 0.4;
 }
@@ -396,7 +396,7 @@ p{
     position: absolute;
     width: 13%;
     height: 7%;
-    top: 88%;
+    top: 91%;
     left: 59%;
     border: 1px solid #000;
     display: flex;
@@ -452,7 +452,7 @@ p{
     height: 25%;
     border: 1px solid #fff;
     position: absolute;
-    left: 656px;
+    left: 584px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,3 +578,4 @@ p{
     text-transform: capitalize;
     letter-spacing: 0.1em;
 }
+
